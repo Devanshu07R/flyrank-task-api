@@ -1,4 +1,5 @@
-from fastapi import FastAPI, HTTPException
+from fastapi import FastAPI, HTTPException, Response
+from fastapi import Response
 from pydantic import BaseModel
 
 app = FastAPI()
@@ -23,6 +24,10 @@ tasks = [
 
 class TaskCreate(BaseModel):
     title:str
+
+class TaskUpdate(BaseModel):
+    title: str
+    done: bool
 
 @app.get("/")
 def root():
@@ -71,3 +76,42 @@ def create_task(task: TaskCreate):
     tasks.append(new_task)
 
     return new_task
+
+@app.put("/tasks/{id}")
+def update_task(id: int, updated_task: TaskUpdate):
+
+    if not updated_task.title.strip():
+        raise HTTPException(
+            status_code=400,
+            detail="Title cannot be empty"
+        )
+
+    for task in tasks:
+
+        if task["id"] == id:
+
+            task["title"] = updated_task.title
+            task["done"] = updated_task.done
+
+            return task
+
+    raise HTTPException(
+        status_code=404,
+        detail=f"Task {id} not found"
+    )
+    
+
+@app.delete("/tasks/{id}", status_code=204)
+def delete_task(id: int):
+    
+    for task in tasks:
+        
+        if task["id"] == id:
+            tasks.remove(task)
+            return Response(status_code=204)
+        
+    raise HTTPException(
+        status_code = 404,
+        detail=f"Task {id} not found."
+        )
+    
