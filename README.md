@@ -208,19 +208,11 @@ Response
 
 ---
 
-# 📸 Swagger UI
+## 📸 Swagger UI
 
-After running the application locally, capture a screenshot of your Swagger UI and save it as:
+The API includes interactive documentation powered by FastAPI's built-in Swagger UI.
 
-```text
-images/swagger-ui.png
-```
-
-Then it will appear below:
-
-```markdown
 ![Swagger UI](images/swagger-ui.png)
-```
 
 ---
 
