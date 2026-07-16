@@ -2,7 +2,11 @@ from fastapi import FastAPI, HTTPException, Response
 from fastapi import Response
 from pydantic import BaseModel
 
-app = FastAPI()
+app = FastAPI(
+    title="Task API",
+    description="A simple CRUD Task API built with FastAPI for the FlyRank Backend AI Engineering Internship.",
+    version="1.0.0"
+)
 
 tasks = [
     {
