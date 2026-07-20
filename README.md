@@ -1,246 +1,288 @@
 # 🚀 Task API
 
-![Python](https://img.shields.io/badge/Python-3.10+-blue)
-![FastAPI](https://img.shields.io/badge/FastAPI-Framework-009688)
-![Status](https://img.shields.io/badge/Project-Completed-success)
-![Backend](https://img.shields.io/badge/Backend-REST_API-orange)
+### Containerize Your Stack (BE-04) • Backend AI Engineering Internship — FlyRank AI
 
-A **RESTful CRUD API** built with **FastAPI** as part of the **FlyRank AI Backend AI Engineering Internship**.
+A production-ready **Task Management REST API** built with **FastAPI**, **PostgreSQL**, **SQLAlchemy**, and **Docker Compose**.
 
-This project demonstrates the fundamentals of backend development by implementing CRUD operations, request validation, proper HTTP status codes, exception handling, and interactive API documentation using **Swagger UI (OpenAPI)**.
+This project demonstrates how to transition from an in-memory CRUD application to a fully containerized backend powered by PostgreSQL, while preserving clean architecture through the **Repository Pattern**. It was developed as part of **Week 3 (BE-04: Containerize Your Stack)** during the **FlyRank AI Backend AI Engineering Internship**.
 
 ---
 
-# 📌 Features
+## ✨ Highlights
 
-* ✅ RESTful CRUD API
-* ✅ Create, Read, Update & Delete Tasks
-* ✅ Request Validation with Pydantic
-* ✅ Proper HTTP Status Codes
-* ✅ Exception Handling
-* ✅ Interactive Swagger UI Documentation
-* ✅ In-Memory Data Storage
-* ✅ Clean & Beginner-Friendly Code
-
----
-
-# 🛠️ Tech Stack
-
-* **Python 3.10+**
-* **FastAPI**
-* **Pydantic**
-* **Uvicorn**
-* **Swagger UI (OpenAPI)**
+* ⚡ FastAPI REST API
+* 🐘 PostgreSQL Database
+* 🧩 SQLAlchemy ORM
+* 🏗 Repository Pattern Architecture
+* 🐳 Docker & Docker Compose
+* 💾 Persistent Docker Volumes
+* 🔐 Environment Variables (.env)
+* 📚 Interactive Swagger Documentation
+* ❤️ Health Check Endpoint
+* 📂 Clean Modular Project Structure
 
 ---
 
-# 📂 Project Structure
+# 🏗 System Architecture
 
-```text
-task-api/
-│
-├── main.py
-├── requirements.txt
-├── .gitignore
-├── README.md
-└── images/
-    └── swagger-ui.png
+```mermaid
+graph TD
+
+A[Client]
+B[FastAPI]
+C[Routes]
+D[Repository Layer]
+E[SQLAlchemy ORM]
+F[(PostgreSQL)]
+G[(Docker Volume)]
+
+A --> B
+B --> C
+C --> D
+D --> E
+E --> F
+F --> G
 ```
 
 ---
 
-# ⚙️ Installation
+# 🛠 Tech Stack
+
+| Category         | Technologies   |
+| ---------------- | -------------- |
+| Language         | Python 3.10+   |
+| Framework        | FastAPI        |
+| Database         | PostgreSQL     |
+| ORM              | SQLAlchemy     |
+| Validation       | Pydantic       |
+| Containerization | Docker         |
+| Orchestration    | Docker Compose |
+| Server           | Uvicorn        |
+
+---
+
+# 📁 Project Structure
+
+```text
+task-api/
+│
+├── app/
+│   ├── __init__.py
+│   ├── database.py
+│   ├── main.py
+│   ├── models.py
+│   ├── repository.py
+│   ├── routes.py
+│   ├── schemas.py
+│   └── services.py
+│
+├── images/
+│
+├── Dockerfile
+├── docker-compose.yml
+├── requirements.txt
+├── .env.example
+├── README.md
+└── .gitignore
+```
+
+---
+
+# 🎯 Assignment Objectives
+
+This project successfully fulfills all Week 3 (BE-04) requirements.
+
+| Requirement                          | Status |
+| ------------------------------------ | :----: |
+| PostgreSQL running in Docker         |    ✅   |
+| Docker Volume for persistent storage |    ✅   |
+| Docker Compose configuration         |    ✅   |
+| SQLAlchemy integration               |    ✅   |
+| Repository Pattern implementation    |    ✅   |
+| Environment variables using `.env`   |    ✅   |
+| `.env.example` included              |    ✅   |
+| CRUD API with PostgreSQL             |    ✅   |
+| Swagger documentation                |    ✅   |
+| Persistence verified after restart   |    ✅   |
+
+---
+
+# ⚙️ Getting Started
 
 ## 1. Clone the Repository
 
 ```bash
 git clone https://github.com/Devanshu07R/flyrank-task-api.git
-```
 
-## 2. Navigate to the Project
-
-```bash
 cd flyrank-task-api
 ```
 
-## 3. Create a Virtual Environment
+---
 
-```bash
-python -m venv venv
-```
-
-## 4. Activate the Virtual Environment
+## 2. Create Virtual Environment
 
 ### Windows
 
 ```bash
+python -m venv venv
 venv\Scripts\activate
 ```
 
-### macOS/Linux
+### Linux / macOS
 
 ```bash
+python3 -m venv venv
 source venv/bin/activate
 ```
 
-## 5. Install Dependencies
+---
+
+## 3. Install Dependencies
 
 ```bash
 pip install -r requirements.txt
 ```
 
-## 6. Run the Server
+---
 
-```bash
-uvicorn main:app --reload
-```
+## 4. Configure Environment Variables
 
-The API will start at:
+Create a `.env` file in the project root.
 
-```text
-http://127.0.0.1:8000
+```env
+DATABASE_URL=postgresql://postgres:postgres@localhost:5432/taskdb
 ```
 
 ---
 
-# 📖 API Documentation
+## 5. Start PostgreSQL
 
-FastAPI automatically generates interactive API documentation.
+```bash
+docker compose up -d
+```
 
-### Swagger UI
+Verify the running container:
 
-```text
+```bash
+docker ps
+```
+
+---
+
+## 6. Run the API
+
+```bash
+uvicorn app.main:app --reload
+```
+
+Application
+
+```
+http://127.0.0.1:8000
+```
+
+Swagger UI
+
+```
 http://127.0.0.1:8000/docs
 ```
 
-### ReDoc
+ReDoc
 
-```text
+```
 http://127.0.0.1:8000/redoc
 ```
 
 ---
 
-# 🏗️ Project Architecture
+# 📡 API Endpoints
 
-```text
-                Client
-                   │
-                   ▼
-            FastAPI Server
-                   │
-         ┌─────────┴─────────┐
-         │                   │
-         ▼                   ▼
-   CRUD Endpoints      Pydantic Validation
-                   │
-                   ▼
-          In-Memory Task List
+| Method | Endpoint      | Description              |
+| ------ | ------------- | ------------------------ |
+| GET    | `/`           | API Information          |
+| GET    | `/health`     | Health Check             |
+| GET    | `/tasks`      | Retrieve all tasks       |
+| GET    | `/tasks/{id}` | Retrieve a specific task |
+| POST   | `/tasks`      | Create a new task        |
+| PUT    | `/tasks/{id}` | Update an existing task  |
+| DELETE | `/tasks/{id}` | Delete a task            |
+
+---
+
+# 💾 Persistence Verification
+
+Database persistence was verified using a Docker Volume.
+
+### Verification Steps
+
+1. Launch PostgreSQL with Docker Compose.
+2. Start the FastAPI application.
+3. Create multiple tasks through Swagger UI.
+4. Stop the FastAPI server.
+5. Stop the PostgreSQL container.
+6. Restart both services.
+7. Retrieve all tasks.
+
+The previously created records remained available after restarting both the application and the PostgreSQL container, confirming successful persistent storage.
+
+---
+
+# 📸 Screenshots
+
+> Add screenshots to the **images/** directory and update the paths below.
+
+## Swagger UI
+
+```
+images/swagger-ui.png
 ```
 
 ---
 
-# 📌 API Endpoints
+## Docker Compose Running
 
-| Method | Endpoint      | Description             |
-| ------ | ------------- | ----------------------- |
-| GET    | `/`           | API Information         |
-| GET    | `/health`     | Health Check            |
-| GET    | `/tasks`      | Retrieve All Tasks      |
-| GET    | `/tasks/{id}` | Retrieve Task by ID     |
-| POST   | `/tasks`      | Create a New Task       |
-| PUT    | `/tasks/{id}` | Update an Existing Task |
-| DELETE | `/tasks/{id}` | Delete a Task           |
-
----
-
-# 📥 Example Request
-
-### Create a Task
-
-**POST** `/tasks`
-
-Request Body
-
-```json
-{
-    "title": "Learn FastAPI"
-}
 ```
-
-Response
-
-```json
-{
-    "id": 4,
-    "title": "Learn FastAPI",
-    "done": false
-}
+images/docker-container.png
 ```
 
 ---
 
-# 📤 Example Response
+## CRUD Operations
 
-### Get All Tasks
-
-**GET** `/tasks`
-
-```json
-[
-    {
-        "id": 1,
-        "title": "Learn FastAPI",
-        "done": false
-    },
-    {
-        "id": 2,
-        "title": "Complete FlyRank Assignment",
-        "done": false
-    },
-    {
-        "id": 3,
-        "title": "Push Project to GitHub",
-        "done": true
-    }
-]
+```
+images/crud-demo.png
 ```
 
 ---
 
-## 📸 Swagger UI
+## PostgreSQL Persistence
 
-The API includes interactive documentation powered by FastAPI's built-in Swagger UI.
-
-![Swagger UI](images/swagger-ui.png)
-
----
-
-# 📚 What I Learned
-
-Through this project, I gained hands-on experience with:
-
-* Designing RESTful APIs
-* CRUD Operations
-* FastAPI Routing
-* Request Validation using Pydantic
-* Exception Handling
-* HTTP Status Codes
-* Interactive API Documentation
-* Git & GitHub Workflow
-* Backend Development Fundamentals
+```
+images/postgres-persistence.png
+```
 
 ---
 
-# 🚀 Future Improvements
+# 🚀 Project Progress
 
-* Connect with a SQL Database
-* User Authentication (JWT)
-* Search & Filtering
-* Pagination
-* Docker Support
-* Unit Testing with Pytest
-* Deploy using Render or Railway
+| Week   | Topic                            | Status |
+| ------ | -------------------------------- | :----: |
+| Week 2 | RESTful CRUD API                 |    ✅   |
+| Week 3 | PostgreSQL + Docker + SQLAlchemy |    ✅   |
+| Week 4 | Redis Integration                |   🔜   |
+
+---
+
+# 📈 Future Enhancements
+
+* JWT Authentication
+* User Management
+* Alembic Database Migrations
+* Redis Caching
+* Background Tasks
+* Unit & Integration Testing
+* CI/CD with GitHub Actions
+* Kubernetes Deployment
 
 ---
 
@@ -248,11 +290,15 @@ Through this project, I gained hands-on experience with:
 
 **Devanshu Dasgupta**
 
-**Backend AI Engineering Intern @ FlyRank AI**
+Backend AI Engineering Intern — FlyRank AI
 
 * GitHub: https://github.com/Devanshu07R
-* LinkedIn: https://www.linkedin.com/in/devanshudasgupta
+* LinkedIn: https://www.linkedin.com/in/devanshudasgupta/
 
 ---
 
-## ⭐ If you found this project helpful, consider giving it a star!
+## ⭐ Support
+
+If you found this project useful, consider giving the repository a **Star**.
+
+Feedback and contributions are always welcome.
