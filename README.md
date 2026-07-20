@@ -10,7 +10,7 @@ Instead of creating separate repositories for every assignment, this repository 
 
 # 📖 About the Project
 
-This repository documents my complete learning journey in Backend AI Engineering.
+This repository documents my complete learning journey in FlyRank AI Backend AI Engineering internship.
 
 Each assignment builds upon the previous one while keeping the same project alive, just like a real software product evolves over time.
 
@@ -24,7 +24,7 @@ Every new assignment introduces new backend concepts, technologies, architectura
 |------|------|------------|:------:|
 | Week 2 | **BE-01** | Build Your First CRUD API | ✅ Completed |
 | Week 2 | **BE-04** | Containerize Your Stack | ✅ Completed |
-| Week 3 | **W3 · A1** | Connecting CRUD to SQLite | 🚧 In Progress |
+| Week 3 | **BE-02** | Connecting to the Database | 🚧 In Progress |
 | Week 3 | **W3 · A2** | Coming Soon | 🔜 |
 | Week 4 | TBD | Future Assignment | 🔜 |
 
