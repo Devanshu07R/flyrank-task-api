@@ -229,39 +229,27 @@ The previously created records remained available after restarting both the appl
 
 # 📸 Screenshots
 
-> Add screenshots to the **images/** directory and update the paths below.
+## 📚 Swagger UI
 
-## Swagger UI
-
-```
-images/swagger-ui.png
-```
+![Swagger UI](images/swagger-ui.png)
 
 ---
 
-## Docker Compose Running
+## 🐳 Docker Compose Running
 
-```
-images/docker-container.png
-```
+![Docker Container](images/docker-container.png)
 
 ---
 
-## CRUD Operations
+## ✅ CRUD Operations
 
-```
-images/crud-demo.png
-```
+![CRUD Demo](images/crud-demo.png)
 
 ---
 
-## PostgreSQL Persistence
+## 💾 PostgreSQL Persistence
 
-```
-images/postgres-persistence.png
-```
-
----
+![PostgreSQL Persistence](images/postgres-persistence.png)
 
 # 🚀 Project Progress
 
@@ -292,8 +280,8 @@ images/postgres-persistence.png
 
 Backend AI Engineering Intern — FlyRank AI
 
-* GitHub: https://github.com/Devanshu07R
-* LinkedIn: https://www.linkedin.com/in/devanshudasgupta/
+- **GitHub:** [Devanshu07R](https://github.com/Devanshu07R)
+- **LinkedIn:** [Devanshu Dasgupta](https://www.linkedin.com/in/devanshudasgupta/)
 
 ---
 
