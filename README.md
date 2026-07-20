@@ -114,7 +114,7 @@ This project successfully fulfills all Week 3 (BE-04) requirements.
 ```bash
 git clone https://github.com/Devanshu07R/flyrank-task-api.git
 
-cd flyrank-task-api
+cd task-api
 ```
 
 ---
