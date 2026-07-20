@@ -1,67 +1,169 @@
 # 🚀 Task API
 
-### Containerize Your Stack (BE-04) • Backend AI Engineering Internship — FlyRank AI
+## Backend AI Engineering Internship Journey • FlyRank AI
 
-A production-ready **Task Management REST API** built with **FastAPI**, **PostgreSQL**, **SQLAlchemy**, and **Docker Compose**.
+A production-ready **Task Management REST API** built progressively throughout the **FlyRank AI Backend AI Engineering Internship**.
 
-This project demonstrates how to transition from an in-memory CRUD application to a fully containerized backend powered by PostgreSQL, while preserving clean architecture through the **Repository Pattern**. It was developed as part of **Week 3 (BE-04: Containerize Your Stack)** during the **FlyRank AI Backend AI Engineering Internship**.
-
----
-
-## ✨ Highlights
-
-* ⚡ FastAPI REST API
-* 🐘 PostgreSQL Database
-* 🧩 SQLAlchemy ORM
-* 🏗 Repository Pattern Architecture
-* 🐳 Docker & Docker Compose
-* 💾 Persistent Docker Volumes
-* 🔐 Environment Variables (.env)
-* 📚 Interactive Swagger Documentation
-* ❤️ Health Check Endpoint
-* 📂 Clean Modular Project Structure
+Instead of creating separate repositories for every assignment, this repository evolves week by week, demonstrating how a backend application grows from a simple CRUD API into a production-ready backend system.
 
 ---
 
-# 🏗 System Architecture
+# 📖 About the Project
 
-```mermaid
-graph TD
+This repository documents my complete learning journey in Backend AI Engineering.
 
-A[Client]
-B[FastAPI]
-C[Routes]
-D[Repository Layer]
-E[SQLAlchemy ORM]
-F[(PostgreSQL)]
-G[(Docker Volume)]
+Each assignment builds upon the previous one while keeping the same project alive, just like a real software product evolves over time.
 
-A --> B
-B --> C
-C --> D
-D --> E
-E --> F
-F --> G
+Every new assignment introduces new backend concepts, technologies, architectural improvements, and engineering best practices.
+
+---
+
+# 📅 Internship Progress
+
+| Week | Code | Assignment | Status |
+|------|------|------------|:------:|
+| Week 2 | **BE-01** | Build Your First CRUD API | ✅ Completed |
+| Week 2 | **BE-04** | Containerize Your Stack | ✅ Completed |
+| Week 3 | **W3 · A1** | Connecting CRUD to SQLite | 🚧 In Progress |
+| Week 3 | **W3 · A2** | Coming Soon | 🔜 |
+| Week 4 | TBD | Future Assignment | 🔜 |
+
+---
+
+# 🏗 Project Evolution
+
+## Phase 1 — CRUD API
+
 ```
+Client
+    │
+FastAPI
+    │
+In-Memory Storage
+```
+
+Completed in:
+
+✅ Week 2 — BE-01
+
+---
+
+## Phase 2 — Docker + PostgreSQL
+
+```
+Client
+     │
+FastAPI
+     │
+Repository Layer
+     │
+SQLAlchemy ORM
+     │
+PostgreSQL
+     │
+Docker Volume
+```
+
+Completed in:
+
+✅ Week 2 — BE-04
+
+---
+
+## Phase 3 — SQLite Database
+
+```
+Client
+     │
+FastAPI
+     │
+Repository Layer
+     │
+SQLAlchemy ORM
+     │
+SQLite Database
+```
+
+Status:
+
+🚧 In Progress
+
+---
+
+## Future Architecture
+
+```
+                Client
+                   │
+               FastAPI
+                   │
+          Repository Pattern
+                   │
+        ┌──────────┴──────────┐
+        │                     │
+    PostgreSQL           Redis Cache
+        │                     │
+     Docker             Background Jobs
+```
+
+---
+
+# ✨ Features
+
+## Completed
+
+- ✅ RESTful CRUD API
+- ✅ FastAPI
+- ✅ Swagger Documentation
+- ✅ Health Check Endpoint
+- ✅ SQLAlchemy ORM
+- ✅ Repository Pattern
+- ✅ PostgreSQL
+- ✅ Docker
+- ✅ Docker Compose
+- ✅ Persistent Docker Volumes
+- ✅ Environment Variables
+
+---
+
+## Currently Working On
+
+- 🚧 SQLite Database
+- 🚧 SQL Queries
+- 🚧 Automatic Database Creation
+- 🚧 Persistent Local Database
+
+---
+
+## Upcoming
+
+- 🔜 Authentication (JWT)
+- 🔜 Redis
+- 🔜 Alembic Migrations
+- 🔜 Unit Testing
+- 🔜 GitHub Actions
+- 🔜 CI/CD
+- 🔜 Kubernetes Deployment
 
 ---
 
 # 🛠 Tech Stack
 
-| Category         | Technologies   |
-| ---------------- | -------------- |
-| Language         | Python 3.10+   |
-| Framework        | FastAPI        |
-| Database         | PostgreSQL     |
-| ORM              | SQLAlchemy     |
-| Validation       | Pydantic       |
-| Containerization | Docker         |
-| Orchestration    | Docker Compose |
-| Server           | Uvicorn        |
+| Category | Technology |
+|-----------|------------|
+| Language | Python 3.10+ |
+| Framework | FastAPI |
+| Database | PostgreSQL / SQLite |
+| ORM | SQLAlchemy |
+| Validation | Pydantic |
+| Containerization | Docker |
+| Orchestration | Docker Compose |
+| API Docs | Swagger UI |
+| Server | Uvicorn |
 
 ---
 
-# 📁 Project Structure
+# 📂 Project Structure
 
 ```text
 task-api/
@@ -88,142 +190,100 @@ task-api/
 
 ---
 
-# 🎯 Assignment Objectives
-
-This project successfully fulfills all Week 3 (BE-04) requirements.
-
-| Requirement                          | Status |
-| ------------------------------------ | :----: |
-| PostgreSQL running in Docker         |    ✅   |
-| Docker Volume for persistent storage |    ✅   |
-| Docker Compose configuration         |    ✅   |
-| SQLAlchemy integration               |    ✅   |
-| Repository Pattern implementation    |    ✅   |
-| Environment variables using `.env`   |    ✅   |
-| `.env.example` included              |    ✅   |
-| CRUD API with PostgreSQL             |    ✅   |
-| Swagger documentation                |    ✅   |
-| Persistence verified after restart   |    ✅   |
+# ✅ Assignment Tracker
 
 ---
 
-# ⚙️ Getting Started
+## Week 2 — BE-01
 
-## 1. Clone the Repository
+### Build Your First CRUD API
 
-```bash
-git clone https://github.com/Devanshu07R/flyrank-task-api.git
+### Concepts Learned
 
-cd task-api
-```
+- FastAPI
+- REST APIs
+- CRUD Operations
+- HTTP Methods
+- Pydantic
+- Swagger Documentation
 
----
+### Completed
 
-## 2. Create Virtual Environment
+- GET
+- POST
+- PUT
+- DELETE
+- Health Check
+- Validation
+- Interactive API Docs
 
-### Windows
+Status
 
-```bash
-python -m venv venv
-venv\Scripts\activate
-```
-
-### Linux / macOS
-
-```bash
-python3 -m venv venv
-source venv/bin/activate
-```
-
----
-
-## 3. Install Dependencies
-
-```bash
-pip install -r requirements.txt
-```
+✅ Completed
 
 ---
 
-## 4. Configure Environment Variables
+## Week 2 — BE-04
 
-Create a `.env` file in the project root.
+### Containerize Your Stack
 
-```env
-DATABASE_URL=postgresql://postgres:postgres@localhost:5432/taskdb
-```
+### Concepts Learned
+
+- Docker
+- Docker Compose
+- PostgreSQL
+- SQLAlchemy
+- Repository Pattern
+- Environment Variables
+- Docker Volumes
+
+### Completed
+
+- PostgreSQL Container
+- SQLAlchemy Integration
+- Persistent Storage
+- CRUD with PostgreSQL
+- Docker Compose
+- Repository Pattern
+
+Status
+
+✅ Completed
 
 ---
 
-## 5. Start PostgreSQL
+## Week 3 — W3 · A1
 
-```bash
-docker compose up -d
-```
+### Connecting CRUD to SQLite
 
-Verify the running container:
+### Objectives
 
-```bash
-docker ps
-```
+- Replace PostgreSQL with SQLite
+- Keep API unchanged
+- Store data in tasks.db
+- Automatic database creation
+- Automatic table creation
+- Automatic sample task insertion
+- SQL Queries
+- Data persistence after restart
 
----
+Status
 
-## 6. Run the API
-
-```bash
-uvicorn app.main:app --reload
-```
-
-Application
-
-```
-http://127.0.0.1:8000
-```
-
-Swagger UI
-
-```
-http://127.0.0.1:8000/docs
-```
-
-ReDoc
-
-```
-http://127.0.0.1:8000/redoc
-```
+🚧 In Progress
 
 ---
 
 # 📡 API Endpoints
 
-| Method | Endpoint      | Description              |
-| ------ | ------------- | ------------------------ |
-| GET    | `/`           | API Information          |
-| GET    | `/health`     | Health Check             |
-| GET    | `/tasks`      | Retrieve all tasks       |
-| GET    | `/tasks/{id}` | Retrieve a specific task |
-| POST   | `/tasks`      | Create a new task        |
-| PUT    | `/tasks/{id}` | Update an existing task  |
-| DELETE | `/tasks/{id}` | Delete a task            |
-
----
-
-# 💾 Persistence Verification
-
-Database persistence was verified using a Docker Volume.
-
-### Verification Steps
-
-1. Launch PostgreSQL with Docker Compose.
-2. Start the FastAPI application.
-3. Create multiple tasks through Swagger UI.
-4. Stop the FastAPI server.
-5. Stop the PostgreSQL container.
-6. Restart both services.
-7. Retrieve all tasks.
-
-The previously created records remained available after restarting both the application and the PostgreSQL container, confirming successful persistent storage.
+| Method | Endpoint | Description |
+|---------|-----------|------------|
+| GET | `/` | API Information |
+| GET | `/health` | Health Check |
+| GET | `/tasks` | Retrieve All Tasks |
+| GET | `/tasks/{id}` | Retrieve One Task |
+| POST | `/tasks` | Create Task |
+| PUT | `/tasks/{id}` | Update Task |
+| DELETE | `/tasks/{id}` | Delete Task |
 
 ---
 
@@ -235,58 +295,143 @@ The previously created records remained available after restarting both the appl
 
 ---
 
-## 🐳 Docker Compose Running
+## 🐳 Docker Compose
 
-![Docker Container](images/docker-container.png)
+![Docker](images/docker-container.png)
 
 ---
 
 ## ✅ CRUD Operations
 
-![CRUD Demo](images/crud-demo.png)
+![CRUD](images/crud-demo.png)
 
 ---
 
 ## 💾 PostgreSQL Persistence
 
-![PostgreSQL Persistence](images/postgres-persistence.png)
-
-# 🚀 Project Progress
-
-| Week   | Topic                            | Status |
-| ------ | -------------------------------- | :----: |
-| Week 2 | RESTful CRUD API                 |    ✅   |
-| Week 3 | PostgreSQL + Docker + SQLAlchemy |    ✅   |
-| Week 4 | Redis Integration                |   🔜   |
+![Persistence](images/postgres-persistence.png)
 
 ---
 
-# 📈 Future Enhancements
+## 🗄 SQLite Database
 
-* JWT Authentication
-* User Management
-* Alembic Database Migrations
-* Redis Caching
-* Background Tasks
-* Unit & Integration Testing
-* CI/CD with GitHub Actions
-* Kubernetes Deployment
+*(Will be added after Week 3 Assignment completion.)*
+
+---
+
+# 🚀 Getting Started
+
+## Clone Repository
+
+```bash
+git clone https://github.com/Devanshu07R/flyrank-task-api.git
+
+cd flyrank-task-api
+```
+
+---
+
+## Create Virtual Environment
+
+### Windows
+
+```bash
+python -m venv venv
+
+venv\Scripts\activate
+```
+
+### Linux/macOS
+
+```bash
+python3 -m venv venv
+
+source venv/bin/activate
+```
+
+---
+
+## Install Dependencies
+
+```bash
+pip install -r requirements.txt
+```
+
+---
+
+## Run the Application
+
+```bash
+uvicorn app.main:app --reload
+```
+
+---
+
+## Swagger UI
+
+```
+http://127.0.0.1:8000/docs
+```
+
+---
+
+# 📈 Learning Roadmap
+
+```
+✔ REST APIs
+
+        ↓
+
+✔ CRUD Operations
+
+        ↓
+
+✔ PostgreSQL
+
+        ↓
+
+✔ Docker
+
+        ↓
+
+🚧 SQLite
+
+        ↓
+
+⬜ Authentication
+
+        ↓
+
+⬜ Redis
+
+        ↓
+
+⬜ Testing
+
+        ↓
+
+⬜ CI/CD
+
+        ↓
+
+⬜ Kubernetes
+```
 
 ---
 
 # 👨‍💻 Author
 
-**Devanshu Dasgupta**
+## Devanshu Dasgupta
 
-Backend AI Engineering Intern — FlyRank AI
+**Backend AI Engineering Intern — FlyRank AI**
 
-- **GitHub:** [Devanshu07R](https://github.com/Devanshu07R)
-- **LinkedIn:** [Devanshu Dasgupta](https://www.linkedin.com/in/devanshudasgupta/)
+- GitHub: https://github.com/Devanshu07R
+- LinkedIn: https://www.linkedin.com/in/devanshudasgupta/
 
 ---
 
-## ⭐ Support
+# ⭐ Support
 
-If you found this project useful, consider giving the repository a **Star**.
+If you found this repository useful, consider giving it a **Star ⭐**.
 
-Feedback and contributions are always welcome.
+It motivates me to continue building and documenting my Backend AI Engineering journey.
