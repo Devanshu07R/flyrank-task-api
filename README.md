@@ -1,4 +1,4 @@
-# 🚀 Task API
+# Task API
 
 ## Backend AI Engineering Internship Journey • FlyRank AI
 
