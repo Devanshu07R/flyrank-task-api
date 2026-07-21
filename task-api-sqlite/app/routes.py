@@ -95,3 +95,17 @@ def update_task(
         )
 
     return task
+
+
+@router.delete("/tasks/{task_id}", status_code=204)
+def delete_task(task_id: int, db: Session = Depends(get_db)):
+
+    task = repository.delete_task(db, task_id)
+
+    if task is None:
+        raise HTTPException(
+            status_code=404,
+            detail=f"Task {task_id} not found"
+        )
+
+    return
