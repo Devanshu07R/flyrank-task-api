@@ -1,6 +1,6 @@
 # 🚀 Task API — SQLite Integration
 
-### Week 3 • Assignment 1 (W3 · A1)
+### Week 3 • A2 Connecting to the database
 ### Backend AI Engineering Internship — FlyRank AI
 
 A RESTful Task Management API built with **FastAPI**, **SQLAlchemy**, and **SQLite**.
