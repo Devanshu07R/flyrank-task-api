@@ -124,6 +124,13 @@ Completed in:
 - ✅ Docker Compose
 - ✅ Persistent Docker Volumes
 - ✅ Environment Variables
+- ✅ SQLite database integration
+- ✅ SQLAlchemy ORM	
+- ✅ Automatic database creation
+- ✅ Automatic table creation
+- ✅ Automatic sample data insertion
+- ✅ Persistent storage
+- ✅ CRUD API
 
 ---
 
