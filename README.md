@@ -288,33 +288,33 @@ Status
 
 ---
 
-# 📸 Screenshots
+# 📸 Screenshots 
 
-## 📚 Swagger UI
+## 📚 Swagger UI (W2 · A1 — Build your first CRUD API)
 
 ![Swagger UI](images/swagger-ui.png)
 
 ---
 
-## 🐳 Docker Compose
+## 🐳 Docker Compose (A3 Containerize your stack)
 
 ![Docker](images/docker-container.png)
 
 ---
 
-## ✅ CRUD Operations
+## ✅ CRUD Operations (A3 Containerize your stack)
 
 ![CRUD](images/crud-demo.png)
 
 ---
 
-## 💾 PostgreSQL Persistence
+## 💾 PostgreSQL Persistence (A3 Containerize your stack)
 
 ![Persistence](images/postgres-persistence.png)
 
 ---
 
-## 🗄 SQLite Database
+## 🗄 SQLite Database (W3 · A1 — Connecting your CRUD to the database)
 
 *(Will be added after Week 3 Assignment completion.)*
 
