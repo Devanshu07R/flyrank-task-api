@@ -316,7 +316,8 @@ Status
 
 ## 🗄 SQLite Database (W3 · A1 — Connecting your CRUD to the database)
 
-*(Will be added after Week 3 Assignment completion.)*
+![SQLite-CRUD](images/sqlite-crud.png)
+
 
 ---
 
