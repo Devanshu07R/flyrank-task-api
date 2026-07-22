@@ -1,4 +1,4 @@
-# 🚀 Task API
+# 🚀 Task API (W2 · A1 — Build your first CRUD API)
 
 ![Python](https://img.shields.io/badge/Python-3.10+-blue)
 ![FastAPI](https://img.shields.io/badge/FastAPI-Framework-009688)
