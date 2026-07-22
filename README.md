@@ -84,9 +84,10 @@ SQLAlchemy ORM
 SQLite Database
 ```
 
-Status:
+Completed in:
 
-🚧 In Progress
+✅ Week 3 — BE-02
+
 
 ---
 
@@ -269,7 +270,7 @@ Status
 
 Status
 
-🚧 In Progress
+✅ Completed
 
 ---
 
