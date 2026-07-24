@@ -3,7 +3,7 @@ from fastapi import Response
 from pydantic import BaseModel
 
 app = FastAPI(
-    title="Task API",
+    title="Task API 1st Assignment",
     description="A simple CRUD Task API built with FastAPI for the FlyRank Backend AI Engineering Internship.",
     version="1.0.0"
 )
